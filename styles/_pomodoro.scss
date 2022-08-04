@@ -10,10 +10,7 @@
             margin: 55px 0px 45px 0px;
             background-color: $pomodoro-purple-superdark;
             border-radius: 26.5px;
-
-            button {
-                border: none;
-            }
+            padding: 5px;
 
             button:focus {
                 color: $pomodoro-purple-superdark;
@@ -39,20 +36,44 @@
             &__border {
                 height: calc(100% - 50px);
                 width: calc(100% - 50px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 border: 10px solid $pomodoro-purple-superdark;
                 border-radius: 50%;
 
                 &__progress {
-                    height: calc(100% - 20px);
-                    width: calc(100% - 20px);
+                    height: 100%;
+                    width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    border: 10px solid $pomodoro-themeColor;
+                    position: relative;
                     border-radius: 50%;
+                    background: conic-gradient($pomodoro-themeColor 1deg, $pomodoro-purple-dark 0deg);
+
+                    &__value {
+                        position: absolute;
+                        text-align: center;
+                    }
+                }
+
+                &__progress::before {
+                    height: calc(100% - 20px);
+                    width: calc(100% - 20px);
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    border-radius: 50%;
+                    background-color: $pomodoro-purple-superdark;
                 }
             }
         }
     }
 }
+

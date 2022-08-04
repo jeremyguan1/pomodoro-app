@@ -1,9 +1,11 @@
 @import "./styles/base";
 @import './styles/pomodoro.scss';
+@import './styles/modal';
 
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Kumbh Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -14,6 +16,7 @@ html {
 body {
     color: $pomodoro-grey;
     background-color: $pomodoro-purple-dark;
+    position: relative;
 }
 
 h1 {
@@ -60,3 +63,17 @@ button {
     line-height: 18px;
     cursor: pointer;
 }
+
+button {
+    border: none;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+  }

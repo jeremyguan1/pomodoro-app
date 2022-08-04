@@ -9,9 +9,7 @@
   margin: 55px 0px 45px 0px;
   background-color: #161932;
   border-radius: 26.5px;
-}
-.pomodoro__container__control button {
-  border: none;
+  padding: 5px;
 }
 .pomodoro__container__control button:focus {
   color: #161932;
@@ -34,23 +32,186 @@
 .pomodoro__container__clock__border {
   height: calc(100% - 50px);
   width: calc(100% - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 10px solid #161932;
   border-radius: 50%;
 }
 .pomodoro__container__clock__border__progress {
-  height: calc(100% - 20px);
-  width: calc(100% - 20px);
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border: 10px solid #F87070;
+  position: relative;
   border-radius: 50%;
+  background: conic-gradient(#F87070 1deg, #1E213F 0deg);
+}
+.pomodoro__container__clock__border__progress__value {
+  position: absolute;
+  text-align: center;
+}
+.pomodoro__container__clock__border__progress::before {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #161932;
+}
+
+.modal {
+  width: 540px;
+  height: 490px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  background-color: #FFFFFF;
+  color: #161932;
+  z-index: 9;
+  border-radius: 25px;
+}
+.modal__overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(10, 12, 28, 0.5);
+  z-index: 8;
+}
+.modal__header {
+  height: 93px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  border-bottom: 1px solid #EFF1FA;
+}
+.modal__container {
+  padding: 0px 40px;
+  position: relative;
+}
+.modal__container__item {
+  padding: 24px 0px;
+}
+.modal__container__item__subItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  font-size: 12px;
+  color: inherit;
+}
+.modal__container__item__number {
+  width: 100%;
+  margin: 0px 10px 0px 0px;
+}
+.modal__container__item__number__input {
+  height: 48px;
+  width: 100%;
+  margin: 10px 10px 0px 0px;
+  border: none;
+  background-color: #EFF1FA;
+  border-radius: 10px;
+  padding: 10px;
+  color: #1E213F;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.modal__container__item__number__input input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.modal__container__item__number__input > input:focus {
+  border: none;
+  outline: none;
+}
+.modal__container__item__number__arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  padding: 5px;
+  cursor: pointer;
+}
+.modal__container__item:not(:last-child) {
+  border-bottom: 1px solid #EFF1FA;
+}
+.modal__container__font {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__container__font__items {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__container__font__items > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.modal__container__font__items > button:focus {
+  background-color: #161932;
+  color: white;
+}
+.modal__container__color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__container__color__items {
+  display: flex;
+  justify-content: space-between;
+}
+.modal__container__color__items > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.modal__container__color__items > button:focus {
+  background-color: #161932;
+  color: white;
+}
+.modal__container__apply {
+  position: absolute;
+  bottom: -5%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  background-color: #F87070;
+  color: #FFFFFF;
+}
+
+.modalParent {
+  display: none;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -61,6 +222,7 @@ html {
 body {
   color: #D7E0FF;
   background-color: #1E213F;
+  position: relative;
 }
 
 h1 {
@@ -106,4 +268,19 @@ button {
   font-weight: bold;
   line-height: 18px;
   cursor: pointer;
+}
+
+button {
+  border: none;
+}
+
+input[type=number] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }/*# sourceMappingURL=style.css.map */

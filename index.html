@@ -9,9 +9,73 @@
   <title>Frontend Mentor | Pomodoro app</title>
 </head>
 <body>
-  <div>
-
+  <div class="modalParent">
+    <div class="modal__overlay"></div>
+    <div class="modal">
+      <div class="modal__header">
+        <h2>Settings</h2>
+        <img src="./assets/icon-close.svg" alt="close icon">
+      </div>
+      <div class="modal__container">
+        <div class="modal__container__item">
+          <h4>Time (Minutes)</h4>
+          <div class="modal__container__item__subItem">
+            <div class="modal__container__item__number">
+              <div>pomodoro</div>
+              <div class="modal__container__item__number__input">
+                <input type="number" min="0" max="24">
+                <div class="modal__container__item__number__arrow">
+                  <img src="./assets/icon-arrow-up.svg" alt="arrow up">
+                  <img src="./assets/icon-arrow-down.svg" alt="arrow down">
+                </div>
+              </div>
+            </div>
+            <div class="modal__container__item__number">
+              <div>short break</div>
+                    <div class="modal__container__item__number__input">
+                <input type="number" min="0" max="24">
+                <div class="modal__container__item__number__arrow">
+                  <img src="./assets/icon-arrow-up.svg" alt="arrow up">
+                  <img src="./assets/icon-arrow-down.svg" alt="arrow down">
+                </div>
+              </div>
+            </div>
+            <div class="modal__container__item__number">
+              <div>long break</div>
+                    <div class="modal__container__item__number__input">
+                <input type="number" min="0" max="24">
+                <div class="modal__container__item__number__arrow">
+                  <img src="./assets/icon-arrow-up.svg" alt="arrow up">
+                  <img src="./assets/icon-arrow-down.svg" alt="arrow down">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal__container__item modal__container__font">
+          <h4>Font</h4>
+          <div class="modal__container__font__items">
+            <button>Aa</button>
+            <button>Aa</button>
+            <button>Aa</button>
+          </div>
+        </div>
+        <div class="modal__container__item modal__container__color">
+          <h4>Color</h4>
+          <div class="modal__container__color__items">
+            <button>&#10004;</button>
+            <button>&#10004;</button>
+            <button>&#10004;</button>
+          </div>
+        </div>
+      </div>
+      <button class="modal__container__apply">
+        Apply
+      </button>
+    </div>
   </div>
+  
+
   <main class="pomodoro">
     <h2>pomodoro</h2>
     <div class="pomodoro__container">
@@ -23,16 +87,19 @@
       <div class="pomodoro__container__clock">
         <div class="pomodoro__container__clock__border">
           <div class="pomodoro__container__clock__border__progress">
-            <h1>00:00</h1>
-            <h3><a>Restart</a></h3>
+            <div class="pomodoro__container__clock__border__progress__value">
+              <h1>00:00</h1>
+              <h3><a>Restart</a></h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div>
-      <img src="./assets/icon-settings.svg" alt="Setting Icon" >
+      <img id="test" src="./assets/icon-settings.svg" alt="Setting Icon" >
     </div>
+
   </main>
   <script src="./index.js" ></script>
 </body>
