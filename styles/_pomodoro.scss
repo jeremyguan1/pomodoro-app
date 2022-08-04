@@ -1,0 +1,58 @@
+.pomodoro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__container {
+        &__control {
+            margin: 55px 0px 45px 0px;
+            background-color: $pomodoro-purple-superdark;
+            border-radius: 26.5px;
+
+            button {
+                border: none;
+            }
+
+            button:focus {
+                color: $pomodoro-purple-superdark;
+                background-color: $pomodoro-themeColor;
+            }
+
+            button:not(:focus) {
+                background: none;
+                color: $pomodoro-grey
+            }
+        }
+
+        &__clock {
+            height: 410px;
+            width: 410px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+            box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+            border-radius: 50%;
+
+            &__border {
+                height: calc(100% - 50px);
+                width: calc(100% - 50px);
+                border: 10px solid $pomodoro-purple-superdark;
+                border-radius: 50%;
+
+                &__progress {
+                    height: calc(100% - 20px);
+                    width: calc(100% - 20px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    border: 10px solid $pomodoro-themeColor;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

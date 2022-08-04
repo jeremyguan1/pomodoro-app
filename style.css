@@ -1,0 +1,109 @@
+.pomodoro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pomodoro__container__control {
+  margin: 55px 0px 45px 0px;
+  background-color: #161932;
+  border-radius: 26.5px;
+}
+.pomodoro__container__control button {
+  border: none;
+}
+.pomodoro__container__control button:focus {
+  color: #161932;
+  background-color: #F87070;
+}
+.pomodoro__container__control button:not(:focus) {
+  background: none;
+  color: #D7E0FF;
+}
+.pomodoro__container__clock {
+  height: 410px;
+  width: 410px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(315deg, #2E325A 0%, #0E112A 100%);
+  box-shadow: -50px -50px 100px #272C5A, 50px 50px 100px #121530;
+  border-radius: 50%;
+}
+.pomodoro__container__clock__border {
+  height: calc(100% - 50px);
+  width: calc(100% - 50px);
+  border: 10px solid #161932;
+  border-radius: 50%;
+}
+.pomodoro__container__clock__border__progress {
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 10px solid #F87070;
+  border-radius: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #D7E0FF;
+  background-color: #1E213F;
+}
+
+h1 {
+  font-size: 10rem;
+  font-weight: bold;
+  line-height: 120px;
+  letter-spacing: -5px;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 34px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 19px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+button {
+  height: 53px;
+  width: 140px;
+  border-radius: 26.5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 18px;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

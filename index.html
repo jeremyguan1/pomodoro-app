@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css" >
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh+Sans|Roboto+Slab|Space+Mono">
   <title>Frontend Mentor | Pomodoro app</title>
 </head>
 <body>
-  pomodoro
-  short break
-  long break
+  <div>
 
-  start 
-  pause
-  restart
+  </div>
+  <main class="pomodoro">
+    <h2>pomodoro</h2>
+    <div class="pomodoro__container">
+      <div class="pomodoro__container__control">
+        <button id="pomodoro">pomodoro</button>
+        <button id="short_break">short break</button>
+        <button id="long_break">long break</button>
+      </div>
+      <div class="pomodoro__container__clock">
+        <div class="pomodoro__container__clock__border">
+          <div class="pomodoro__container__clock__border__progress">
+            <h1>00:00</h1>
+            <h3><a>Restart</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Settings
-
-  Time (minutes)
-  pomodoro
-  short break
-  long break
-
-  Font
-  Color
-
-  Apply
+    <div>
+      <img src="./assets/icon-settings.svg" alt="Setting Icon" >
+    </div>
+  </main>
+  <script src="./index.js" ></script>
 </body>
 </html>
